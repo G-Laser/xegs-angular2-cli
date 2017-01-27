@@ -6,9 +6,9 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HomeComponent} from './home/home.component';
+//import {StorageDeviceComponent} from './devices/storage-device.component';
 import {AboutComponent} from './about/about.component';
-import {StorageDeviceComponent} from './devices/storage-device.component';
-import {ContactComponent} from './contact/contact.component';
+//import {ContactComponent} from './contact/contact.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 @NgModule({
@@ -23,9 +23,8 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     declarations: [
     AppComponent,
     HomeComponent,
+    //StorageDeviceComponent
     AboutComponent,
-    StorageDeviceComponent,
-    
     PageNotFoundComponent
   ],
   providers: [],
