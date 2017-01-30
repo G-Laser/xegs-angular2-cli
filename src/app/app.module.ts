@@ -8,8 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import {HomeComponent} from './home/home.component';
 //import {StorageDeviceComponent} from './devices/storage-device.component';
 import {AboutComponent} from './about/about.component';
-//import {ContactComponent} from './contact/contact.component';
+import {ContactComponent} from './contact/contact.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { SidebarComponent } from './common/sidebar/sidebar.component';
+import { HeaderComponent } from './common/header/header.component';
 
 @NgModule({
   imports: [
@@ -25,7 +28,10 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     HomeComponent,
     //StorageDeviceComponent
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FooterComponent,
+    SidebarComponent,
+    HeaderComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
