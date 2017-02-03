@@ -6,6 +6,7 @@ import {AboutComponent} from './about/about.component';
 //import {ContactComponent} from './contact/contact.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import { Logger } from 'angular2-logger/core';
+
 const routes: Routes = [
     {
         path: 'home',

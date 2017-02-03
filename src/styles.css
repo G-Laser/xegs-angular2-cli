@@ -1,20 +1,23 @@
 /*This is a custom CSS file sheet*/
 
-/*html {
-    background-image: url(../img/XegsBackgroundHalf.jpg);
-    background-repeat: repeat-x;
-    padding: 0 10em 0 10em;
-    background-color: #060839;
- } */
-
-
 header.div {
      background: hsla(0,0,0,0.5);  
 }
- body {
+
+body {
     border-radius: 0 0 9px 9px;
     font-family: 'Khula', sans-serif;
- } 
+    font-size: 200%;
+ }
+
+.navbar {
+    padding-right: 20px;
+}
+
+.page-content {
+    padding-left: 8%; 
+    padding-right: 8%;
+ }
 
 .article-image {
     border-radius: 1em;
@@ -24,6 +27,27 @@ header.div {
     width: 200px;
 }
 
+#title-banner {
+  background: url('assets/img/XEGSHeadingBackground.jpg') no-repeat center top fixed;
+  text-align: center;
+  position: relative;
+  padding: 57px;
+  background-position: 0px 54px;
+
+} 
+
+#logo {
+    background-image: url('assets/img/XEGSCartByCartLogo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    display: block;
+    width: 700px;
+    height: 234px;
+    text-indent: -20000em;
+    float: none;
+    margin: 0 auto;
+}
 
 .glyphicon-home {
 	color: #c2d7f4;
@@ -41,11 +65,10 @@ header.div {
 	color: #e39aff;
 }
 
-
 .navbar-default {
     background-color: #8D93C7;
     border-color: #444B8F;
- }
+}
 
 article {
     vertical-align: text-top;
@@ -56,6 +79,7 @@ article {
     font-family: 'Audiowide', cursive;
     font-size: 150%;
 }
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
     color: #D1F0FF;
@@ -78,7 +102,7 @@ article {
 }
 
 .article-title {
-    margin-top: 0px;
+    margin-top: -10px;
     font-family: 'Monofett', cursive;
     font-size: 300%;
 }
@@ -96,14 +120,26 @@ article {
     margin-bottom: 2em;
 }
 
-.tab-text {
-    font-size: 120%
-}
-
-.bio-heading {
+h2.bio-heading {
     border: 1px solid #000;
     background-color: #8D93C7;
     border-radius: 10px;
+    font-size: 300%;
+}
+
+.bio-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;    
+}
+
+div.bio-body {
+    padding: 20px 0 0 10px;
+    
+}
+
+.about-tab {
+    font-size: 200%
 }
 
 footer {
