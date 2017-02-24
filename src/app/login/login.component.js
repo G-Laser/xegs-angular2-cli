@@ -8,49 +8,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var auth_service_1 = require('../auth.service');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var index_1 = require("../_services/index");
 var LoginComponent = (function () {
-    function LoginComponent(authService, router) {
-        this.authService = authService;
+    function LoginComponent(router, authenticationService) {
         this.router = router;
-        this.setMessage();
+        this.authenticationService = authenticationService;
+        this.model = {};
+        this.loading = false;
+        this.error = '';
     }
-    LoginComponent.prototype.setMessage = function () {
-        this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
+    LoginComponent.prototype.ngOnInit = function () {
+        // reset login status
+        this.authenticationService.logout();
     };
     LoginComponent.prototype.login = function () {
         var _this = this;
-        this.message = 'Trying to log in ...';
-        this.authService.login().subscribe(function () {
-            _this.setMessage();
-            if (_this.authService.isLoggedIn) {
-                // Get the redirect URL from our auth service
-                // If no redirect has been set, use the default
-                var redirect = _this.authService.redirectUrl ? _this.authService.redirectUrl : '/admin';
-                // Set our navigation extras object
-                // that passes on our global query params and fragment
-                var navigationExtras = {
-                    preserveQueryParams: true,
-                    preserveFragment: true
-                };
-                // Redirect the user
-                _this.router.navigate([redirect], navigationExtras);
+        this.loading = true;
+        this.authenticationService.login(this.model.username, this.model.password)
+            .subscribe(function (result) {
+            if (result === true) {
+                _this.router.navigate(['/']);
+            }
+            else {
+                _this.error = 'Username or password is incorrect';
+                _this.loading = false;
             }
         });
     };
-    LoginComponent.prototype.logout = function () {
-        this.authService.logout();
-        this.setMessage();
-    };
-    LoginComponent = __decorate([
-        core_1.Component({
-            template: "\n    <h2>LOGIN</h2>\n    <p>{{message}}</p>\n    <p> <lable>Username: </label><input type=\"text\" required=\"true\"></p>\n    <p> <lable>Password: </label><input type=\"password\" required=\"true\"></p>\n    <button (click)=\"register()\">Register</button>\n      <button (click)=\"login()\"  *ngIf=\"!authService.isLoggedIn\">Login</button>\n      <button (click)=\"logout()\" *ngIf=\"authService.isLoggedIn\">Logout</button>\n    </p>"
-        }), 
-        __metadata('design:paramtypes', [auth_service_1.AuthService, router_1.Router])
-    ], LoginComponent);
     return LoginComponent;
 }());
+LoginComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        templateUrl: 'login.component.html'
+    }),
+    __metadata("design:paramtypes", [router_1.Router,
+        index_1.AuthenticationService])
+], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

@@ -1,0 +1,154 @@
+<main class="col-lg-10 col-md-9 col-sm-9 col-xs-12" style="padding-top: 25px;">
+  <form novalidate (ngSubmit)="onSubmit(StorageDevice)" [formGroup]="StorageDevice">
+    <div>
+      <div class="form-group">
+        <h2>Company Information</h2>
+        <label>
+          <span>Manufacturer</span>
+          <input type="text" placeholder="Name of the Organization" formControlName="Organization-Name"/>
+        </label>
+        <label>
+          <span>Hardware Creator(s)</span>
+          <input type="text" placeholder="Hardware Creators Name(s)" formControlName="HardwareCreator"/>
+        </label>
+        <label>
+          <span>Software Creator(s)</span>
+          <input type="text" placeholder="Software Creators Name(s)" formControlName="SoftwareCreator"/>
+        </label>
+        <label>
+          <span>Website</span>
+          <input type="url" placeholder="Webpage Address" formControlName="Website"/>
+        </label>
+        <label>
+          <span>Country of Operation</span>
+          <input type="text" placeholder="The Manufacturer's Country of Operation" formControlName="CountryOfOperation"/>
+        </label>
+        <!-- Consider this as a distributer option 
+        <label>
+          <span>US Sales Source</span>
+          <input type="text" placeholder="The Manufacturer's Country of Operation" formControlName="CountryOfOperation"/>
+        </label> -->
+      </div>
+      <div class="form-group">
+        <h2>Purchasing Info</h2>
+         <!-- Make this a dropdown to represent if device is available, not available, batches, etc-->
+        <label>
+          <span>Device Availability</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Price</span>
+          <input type="number" placeholder="The price of the device in your prefered currency" formControlName="PriceOfDevice"/>
+        </label>
+        <!-- think about making this a dropdown -->
+        <label>
+          <span>Payment Method</span>
+          <input type="text" />
+        </label>
+        <!-- dropdown for fixed price or varible -->
+        <label>
+          <span>Shipping Cost</span>
+          <input type="number" placeholder="The price of the device in your prefered currency" formControlName="ShippingCost"/>
+        </label>
+        <!-- dropdown for shipping carriers-->
+        <label>
+          <span>Shipping method</span>
+          <input type="text" placeholder="The shipping carrier" formControlName="ShippingMethod"/>
+        </label>
+        <!-- Allow for additional text boxes to be added for each item -->
+        <label>
+          <span>Package contents</span>
+          <input type="text" />
+        </label>
+        <!-- Allow for additional text boxes to be added for each item -->
+        <label>
+          <span>Additional hardware requirement (not supplied)</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Notes</span>
+          <textarea class="form-control" rows="5" id="notes" formControlName="notes"/>
+        </label>
+      </div>
+      <div class="form-group">
+        <h2>Device Hardware Info</h2>
+        <label>
+          <span>Initial Hardware Release Date</span>
+          <input type="date" />
+        </label>
+        <label>
+          <span>Latest Hardware Version</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Previous Hardware Versions</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Firmware upgradable</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Storage Medium</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>External Storage </span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Max File Transfer Speed to device</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>File Count limit</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Real-time clock</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Case Colors and/or styles</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Case Included in cost</span>
+          <input type="text" />
+          </label>
+        <label>
+          <span>Initial Release Date</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Initial Release Date</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Initial Release Date</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Initial Release Date</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Initial Release Date</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Initial Release Date</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Initial Release Date</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Initial Release Date</span>
+          <input type="text" />
+        </label>
+      </div>
+    </div>
+  </form>
+</main>

@@ -1,55 +1,37 @@
-import { Component }        from '@angular/core';
-import { Router,
-         NavigationExtras } from '@angular/router';
-import { AuthService }      from '../auth.service';
+﻿import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AuthenticationService } from '../_services/index';
 
 @Component({
-  template: `
-    <h2>LOGIN</h2>
-    <p>{{message}}</p>
-    <p> <lable>Username: </label><input type="text" required="true"></p>
-    <p> <lable>Password: </label><input type="password" required="true"></p>
-    <button (click)="register()">Register</button>
-      <button (click)="login()"  *ngIf="!authService.isLoggedIn">Login</button>
-      <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
-    </p>`
+    moduleId: module.id,
+    templateUrl: 'login.component.html'
 })
-export class LoginComponent {
-  message: string;
 
-  constructor(public authService: AuthService, public router: Router) {
-    this.setMessage();
-  }
+export class LoginComponent implements OnInit {
+    model: any = {};
+    loading = false;
+    error = '';
 
-  setMessage() {
-    this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
-  }
+    constructor(
+        private router: Router,
+        private authenticationService: AuthenticationService) { }
 
-  login() {
-    this.message = 'Trying to log in ...';
+    ngOnInit() {
+        // reset login status
+        this.authenticationService.logout();
+    }
 
-    this.authService.login().subscribe(() => {
-      this.setMessage();
-      if (this.authService.isLoggedIn) {
-        // Get the redirect URL from our auth service
-        // If no redirect has been set, use the default
-        let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/admin';
-
-        // Set our navigation extras object
-        // that passes on our global query params and fragment
-        let navigationExtras: NavigationExtras = {
-          preserveQueryParams: true,
-          preserveFragment: true
-        };
-
-        // Redirect the user
-        this.router.navigate([redirect], navigationExtras);
-      }
-    });
-  }
-
-  logout() {
-    this.authService.logout();
-    this.setMessage();
-  }
+    login() {
+        this.loading = true;
+        this.authenticationService.login(this.model.username, this.model.password)
+            .subscribe(result => {
+                if (result === true) {
+                    this.router.navigate(['/']);
+                } else {
+                    this.error = 'Username or password is incorrect';
+                    this.loading = false;
+                }
+            });
+    }
 }

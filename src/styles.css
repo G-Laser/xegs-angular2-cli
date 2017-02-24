@@ -28,15 +28,18 @@ body {
 }
 
 #title-banner {
-  background: url('assets/img/XEGSHeadingBackground.jpg') no-repeat center top fixed;
+ /*background: url('assets/img/XEGSHeadingBackground.jpg') no-repeat center top fixed;*/
+  background-image: url('assets/img/XEGSHeadingBackground.jpg');
+  height: 100%;
+  background-size: cover;
   text-align: center;
   position: relative;
   padding: 57px;
-  background-position: 0px 54px;
+  /*background-position: 0px 54px;*/
 
 } 
 
-#logo {
+/*#logo {
     background-image: url('assets/img/XEGSCartByCartLogo.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -47,7 +50,7 @@ body {
     text-indent: -20000em;
     float: none;
     margin: 0 auto;
-}
+} */
 
 .glyphicon-home {
 	color: #c2d7f4;
@@ -110,12 +113,12 @@ article {
 .img-thumbnail {
     max-width: 110px;
     max-height: 120px;
-    margin-bottom: 3px;
 }
 
 .col-lg-2, .col-md-3, .col-sm-3 > .panel-title {
     text-align: center;
 }
+
 article {
     margin-bottom: 2em;
 }
