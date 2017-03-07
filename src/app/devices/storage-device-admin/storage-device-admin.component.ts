@@ -12,4 +12,12 @@ export class StorageDeviceAdminComponent implements OnInit {
   ngOnInit() {
   }
 
+  addComponent() {
+
+  }
+
+  deleteComponent() {
+    
+  }
+
 }

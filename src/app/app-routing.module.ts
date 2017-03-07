@@ -6,22 +6,23 @@ import {StorageDeviceViewComponent} from './devices/storage-device-view/storage-
 import {StorageDeviceAdminComponent} from './devices/storage-device-admin/storage-device-admin.component';
 import {ContactComponent} from './contact/contact.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {LoginComponent} from './login/login.component';
 import { Logger } from 'angular2-logger/core';
 import { AuthGuard } from './_guards/index';
 
 const routes: Routes = [
     {
         path: 'home',
-        component: HomeComponent,
+        component: HomeComponent
     },
     {
         path: 'storagesolutions',
         component: StorageDeviceViewComponent
     },
     {
-        path: 'storagesolutionsAdmim',
-        component: StorageDeviceAdminComponent,
-        canActivate: [AuthGuard]
+        path: 'storagesolutionsadmim',
+        component: StorageDeviceAdminComponent
+        ,canActivate: [AuthGuard]
     },
     {
         path: 'about',
@@ -36,7 +37,7 @@ const routes: Routes = [
         redirectTo: 'home',
         pathMatch: 'full'
     },
-    { path: '**', component: PageNotFoundComponent }
+    { path: '**', component: HomeComponent }
 ];
 
 export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(routes);

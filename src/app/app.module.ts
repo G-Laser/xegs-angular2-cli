@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { AlertModule } from 'ng2-bootstrap';
 import { AppComponent } from './app.component';
@@ -16,13 +16,16 @@ import { StorageDeviceAdminComponent } from './devices/storage-device-admin/stor
 import { StorageDeviceViewComponent } from './devices/storage-device-view/storage-device-view.component';
 
 import { AuthGuard } from './_guards/index';
-import { AuthenticationService, UserService } from './_services/index';
+import { AlertService, AuthenticationService, UserService } from './_services/index';
 import { LoginComponent } from './login/index';
+import { fakeBackendProvider } from './_helpers/index';
+import { MockBackend, MockConnection } from '@angular/http/testing';
+import { BaseRequestOptions } from '@angular/http';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
     JsonpModule,
@@ -39,16 +42,19 @@ import { LoginComponent } from './login/index';
     SidebarComponent,
     HeaderComponent,
     StorageDeviceAdminComponent,
-    StorageDeviceViewComponent
+    StorageDeviceViewComponent,
+    LoginComponent
   ],
-  providers: [AuthGuard,
+  providers: [
+        AuthGuard,
+        AlertService,
         AuthenticationService,
         UserService,
- 
+
         // providers used to create fake backend
-        //fakeBackendProvider,
-        //MockBackend,
-        //BaseRequestOptions
+        fakeBackendProvider,
+        MockBackend,
+        BaseRequestOptions
         ],
   bootstrap: [AppComponent]
 })

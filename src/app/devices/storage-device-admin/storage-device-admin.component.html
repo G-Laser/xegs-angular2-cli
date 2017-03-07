@@ -1,5 +1,5 @@
 <main class="col-lg-10 col-md-9 col-sm-9 col-xs-12" style="padding-top: 25px;">
-  <form novalidate (ngSubmit)="onSubmit(StorageDevice)" [formGroup]="StorageDevice">
+  <form novalidate (ngSubmit)="onSubmit(storagedeviceadmin)" [formGroup]="storagedeviceadmin">
     <div>
       <div class="form-group">
         <h2>Company Information</h2>
@@ -31,10 +31,17 @@
       </div>
       <div class="form-group">
         <h2>Purchasing Info</h2>
-         <!-- Make this a dropdown to represent if device is available, not available, batches, etc-->
+        <!-- Make this a dropdown to represent if device is available, not available, batches, etc-->
         <label>
           <span>Device Availability</span>
-          <input type="text" />
+          <div class="btn-group">
+  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Large button <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    ...
+  </ul>
+</div>
         </label>
         <label>
           <span>Price</span>
@@ -58,7 +65,20 @@
         <!-- Allow for additional text boxes to be added for each item -->
         <label>
           <span>Package contents</span>
-          <input type="text" />
+          <table>
+            <tr>
+              <td>
+                <div class="input-group">
+                  <input type="text" class="form-control">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                      <span class="glyphicon glyphicon-plus-sign" aria-hidden="true" (click)="clicked()"></span>
+                    </button>
+                </span>
+    </div><!-- /input-group -->
+              </td>
+            </tr>
+            </table>
         </label>
         <!-- Allow for additional text boxes to be added for each item -->
         <label>
@@ -67,7 +87,7 @@
         </label>
         <label>
           <span>Notes</span>
-          <textarea class="form-control" rows="5" id="notes" formControlName="notes"/>
+          <!-- <textarea class="form-control" rows="5" id="notes" formControlName="notes" /> -->
         </label>
       </div>
       <div class="form-group">
