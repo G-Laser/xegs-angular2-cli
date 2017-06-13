@@ -49,8 +49,8 @@ export class StorageDeviceViewComponent implements OnInit {
         onDeviceDisplay: [''],
         resolutiion: this._fb.group({
           format: ['', <any>Validators.required],
-          x: ['',[<any>Validators.required, <any>Validators.minLength(1)]],
-          y: ['',[<any>Validators.required, <any>Validators.minLength(1)]]
+          x: ['', [<any>Validators.required, <any>Validators.minLength(1)]],
+          y: ['', [<any>Validators.required, <any>Validators.minLength(1)]]
         }),
         touchSensitive: ['']
       }),
@@ -60,11 +60,11 @@ export class StorageDeviceViewComponent implements OnInit {
       additionalRequirements: [''],
       additionalCosts: [''],
       boardConstruction: [''],
-      atariMinRam: ['',[<any>Validators.required, <any>Validators.minLength(1)]],
+      atariMinRam: ['', [<any>Validators.required, <any>Validators.minLength(1)]],
       atariModelSupport: ['', <any>Validators.required,],
       softwareLicence: ['', <any>Validators.required],
       softwareDownloadURL: [''],
-      onScreenMenu: this._fb.group({ 
+      onScreenMenu: this._fb.group({
         fileCountLimit: [''],
         fileNameDisplayedLength: [''],
         fileSearch: ['', <any>Validators.required],
@@ -75,17 +75,9 @@ export class StorageDeviceViewComponent implements OnInit {
         joystickNav: ['']
       }),
       formatSupport: <any>Validators.required,
-      noOfFloppys: [''],
-
-
-
-
-
-      })
-
-
-
+      noOfFloppys: ['']
     })
-  };
-}
+  }
+};
+
 

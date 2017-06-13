@@ -51,6 +51,9 @@ body {
     float: none;
     margin: 0 auto;
 } */
+.no-wrap {
+   white-space: nowrap; 
+}
 
 .glyphicon-home {
 	color: #c2d7f4;

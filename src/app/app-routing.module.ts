@@ -22,7 +22,7 @@ const routes: Routes = [
     {
         path: 'storagesolutionsadmim',
         component: StorageDeviceAdminComponent
-        ,canActivate: [AuthGuard]
+        //,canActivate: [AuthGuard]
     },
     {
         path: 'about',

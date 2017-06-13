@@ -18,7 +18,7 @@ import { StorageDeviceViewComponent } from './devices/storage-device-view/storag
 import { AuthGuard } from './_guards/index';
 import { AlertService, AuthenticationService, UserService } from './_services/index';
 import { LoginComponent } from './login/index';
-import { fakeBackendProvider } from './_helpers/index';
+//import { fakeBackendProvider } from './_helpers/index';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 
@@ -52,7 +52,7 @@ import { BaseRequestOptions } from '@angular/http';
         UserService,
 
         // providers used to create fake backend
-        fakeBackendProvider,
+        //fakeBackendProvider,
         MockBackend,
         BaseRequestOptions
         ],
