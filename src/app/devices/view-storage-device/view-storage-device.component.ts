@@ -3,11 +3,11 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-storage-device-view',
-  templateUrl: './storage-device-view.component.html',
-  styleUrls: ['./storage-device-view.component.css']
+  templateUrl: './view-storage-device.component.html',
+  styleUrls: ['./view-storage-device.component.css']
 })
 
-export class StorageDeviceViewComponent implements OnInit {
+export class ViewStorageDeviceComponent implements OnInit {
 
   public storageDeviceForm: FormGroup;
   public submitted: boolean;

@@ -2,7 +2,19 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html'
+  template: `<!-- ASIDE SECTION -->
+<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Related Podcasts</h3>
+        </div>
+        <div class="panel-body text-center">
+            <a href="{{podcast.url}}" title="{{podcast.name}}" target="_blank" *ngFor="let podcast of PODCASTS">
+                <img src="{{podcast.imgPath}}" class="img-thumbnail img-responsive" />
+            </a>
+        </div>        
+    </div>
+</div>`
 })
 
 export class SidebarComponent  {

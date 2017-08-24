@@ -2,8 +2,8 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
-import {StorageDeviceViewComponent} from './devices/storage-device-view/storage-device-view.component';
-import {StorageDeviceAdminComponent} from './devices/storage-device-admin/storage-device-admin.component';
+import {ViewStorageDeviceComponent} from './devices/view-storage-device/view-storage-device.component';
+import {EditStorageDeviceComponent} from './devices/edit-storage-device/edit-storage-device.component';
 import {ContactComponent} from './contact/contact.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {LoginComponent} from './login/login.component';
@@ -17,11 +17,11 @@ const routes: Routes = [
     },
     {
         path: 'storagesolutions',
-        component: StorageDeviceViewComponent
+        component: ViewStorageDeviceComponent
     },
     {
         path: 'storagesolutionsadmim',
-        component: StorageDeviceAdminComponent
+        component: EditStorageDeviceComponent
         //,canActivate: [AuthGuard]
     },
     {

@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { StorageDeviceAdminComponent } from './storage-device-admin.component';
+import { ViewStorageDeviceComponent } from './view-storage-device.component';
 
-describe('StorageDeviceAddEditComponent', () => {
-  let component: StorageDeviceAdminComponent;
-  let fixture: ComponentFixture<StorageDeviceAdminComponent>;
+describe('StorageDeviceViewComponent', () => {
+  let component: ViewStorageDeviceComponent;
+  let fixture: ComponentFixture<ViewStorageDeviceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StorageDeviceAdminComponent ]
+      declarations: [ ViewStorageDeviceComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StorageDeviceAdminComponent);
+    fixture = TestBed.createComponent(ViewStorageDeviceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
