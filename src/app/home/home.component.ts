@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-//import {StateService} from '../common/state.service';
+import {StateService} from '../common/state.service';
 
 @Component({
   selector: 'app-home-component',

@@ -17,9 +17,9 @@ import { ViewStorageDeviceComponent } from './devices/view-storage-device/view-s
 import { EditStorageDeviceComponent } from './devices/edit-storage-device/edit-storage-device.component';
 
 import { AuthGuard } from './_guards/index';
-import { AlertService, AuthenticationService, UserService } from './_services/index';
+import { AlertService, AuthenticationService, UserService, ArticleService } from './_services/index';
 import { LoginComponent } from './login/index';
-//import { fakeBackendProvider } from './_helpers/index';
+// import { fakeBackendProvider } from './_helpers/index';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 import {ViewArticleComponent} from './article/view-article.component'
@@ -46,16 +46,17 @@ import {ViewArticleComponent} from './article/view-article.component'
     ViewStorageDeviceComponent,
     EditStorageDeviceComponent,
     LoginComponent,
-    ViewArticleComponent  
+    ViewArticleComponent
   ],
   providers: [
         AuthGuard,
         AlertService,
+        ArticleService,
         AuthenticationService,
         UserService,
         // providers used to create fake backend
-        //fakeBackendProvider,
-        //MockBackend,
+        // fakeBackendProvider,
+        // MockBackend,
         BaseRequestOptions
         ],
   bootstrap: [AppComponent]
