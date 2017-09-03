@@ -1,43 +1,21 @@
 /*This is a custom CSS file sheet*/
 
-header.div {
-     background: hsla(0,0,0,0.5);  
-}
 
-body {
-    border-radius: 0 0 9px 9px;
-    font-family: 'Khula', sans-serif;
-    font-size: 200%;
- }
-
-.navbar {
-    padding-right: 20px;
-}
-
-.page-content {
-    padding-left: 8%; 
-    padding-right: 8%;
- }
-
-.article-image {
-    border-radius: 1em;
-    border-color: black;
-    border-width: 1px;
-    margin-right: 10px;
-    width: 200px;
-}
+/*html {
+    background-image: url(../img/XegsBackgroundHalf.jpg);
+    background-repeat: repeat-x;
+    padding: 0 10em 0 10em;
+    background-color: #060839;
+ } */
 
 #title-banner {
- /*background: url('assets/img/XEGSHeadingBackground.jpg') no-repeat center top fixed;*/
-  background-image: url('assets/img/XEGSHeadingBackground.jpg');
-  height: 100%;
-  background-size: cover;
-  text-align: center;
-  position: relative;
-  padding: 57px;
-  /*background-position: 0px 54px;*/
-
-} 
+    background: url('assets/img/XEGSHeadingBackground.jpg') no-repeat center top fixed;
+    text-align: center;
+    position: relative;
+    padding: 57px;
+    background-position: 0px 54px;
+    height: 400px
+}
 
 #logo {
     background-image: url('assets/img/XEGSCartByCartLogo.png');
@@ -50,80 +28,55 @@ body {
     text-indent: -20000em;
     float: none;
     margin: 0 auto;
-} 
-.no-wrap {
-   white-space: nowrap; 
 }
 
-.glyphicon-home {
-	color: #c2d7f4;
+body {
+    border-radius: 0 0 9px 9px;
+    font-family: 'Khula', sans-serif;
+    font-size: 200%;
 }
 
-.glyphicon-play-circle {
-	color: #fffed2;
+.page-content {
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
-.glyphicon-info-sign {
-	color: #FFC0DC;
-}
-
-.glyphicon-question-sign {
-	color: #e39aff;
-}
-
-.navbar-default {
-    background-color: #8D93C7;
-    border-color: #444B8F;
+.article-image {
+    border-radius: 6px;
+    border-color: black;
+    border-width: 1px;
+    border: 2px solid black;
+    margin-right: 10px;
+    width: 200px;
 }
 
 article {
     vertical-align: text-top;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: #161D5D;
-    font-family: 'Audiowide', cursive;
-    font-size: 150%;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #D1F0FF;
-}
-
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #555;
-    background-color: #E7E7E7;
-}
-
-.panel-default > .panel-heading  {
-	background-color: #7980C7;
-	border-color: #444B8F;
-}
-
-.panel-body {
-    background-color: #8D93C7;
+    margin-bottom: 2em;
 }
 
 .article-title {
-    margin-top: -10px;
+    margin-top: -20px;
     font-family: 'Monofett', cursive;
-    font-size: 300%;
+    font-size: 250%;
+    white-space: nowrap;
+}
+
+.article-summary {
+    font-style: italic;
+    font-weight: 600;
 }
 
 .img-thumbnail {
     max-width: 110px;
     max-height: 120px;
+    margin-bottom: 3px;
 }
 
-.col-lg-2, .col-md-3, .col-sm-3 > .panel-title {
+.col-lg-2,
+.col-md-3,
+.col-sm-3>.panel-title {
     text-align: center;
-}
-
-article {
-    margin-bottom: 2em;
 }
 
 h2.bio-heading {
@@ -136,22 +89,13 @@ h2.bio-heading {
 .bio-image {
     width: 80px;
     height: 80px;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 div.bio-body {
     padding: 20px 0 0 10px;
-    
 }
 
-.about-tab {
-    font-size: 200%
+audio {
+    width: 90%;
 }
-
-footer {
-        color: #666;
-        background: #161D5D;
-        padding: 10px 0 10px 0;
-        border-top: 1px solid #000;
-        border-radius: 0 0 7px 7px;
-        }

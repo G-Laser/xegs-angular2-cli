@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-sidebar',
   template: `<!-- ASIDE SECTION -->
-<div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+<!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Related Podcasts</h3>
@@ -12,9 +12,9 @@ import { Component } from '@angular/core';
             <a href="{{podcast.url}}" title="{{podcast.name}}" target="_blank" *ngFor="let podcast of PODCASTS">
                 <img src="{{podcast.imgPath}}" class="img-thumbnail img-responsive" />
             </a>
-        </div>        
-    </div>
-</div>`
+        </div>
+    </div>`,
+styleUrls: ['./sidebar.component.css']
 })
 
 export class SidebarComponent  {

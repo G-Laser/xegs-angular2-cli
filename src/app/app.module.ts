@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { JsonpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/index';
 // import { fakeBackendProvider } from './_helpers/index';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
-import {ViewArticleComponent} from './article/view-article.component'
+import { ViewArticleComponent } from './article/view-article/view-article.component';
+import { EditArticleComponent } from './article/edit-article/edit-article.component';
 
 @NgModule({
   imports: [
@@ -46,7 +48,8 @@ import {ViewArticleComponent} from './article/view-article.component'
     ViewStorageDeviceComponent,
     EditStorageDeviceComponent,
     LoginComponent,
-    ViewArticleComponent
+    ViewArticleComponent,
+    EditArticleComponent
   ],
   providers: [
         AuthGuard,

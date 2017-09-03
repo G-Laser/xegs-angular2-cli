@@ -4,9 +4,9 @@
         "subtitle": "Test Subtitle 0",
         "imagePath": "/assets/img/articles/heading/Episode0.png",
         "postedDateTime": "2017-08-18T22:35:42Z",
-        "content": "Content for episode 0",
+        "description": "Content for episode 0",
         "audioPath": "",
-        "notes": "Some notes for article 0"
+        "showNotes": "Some notes for article 0"
     },
     {
         "Id": 2,
@@ -14,9 +14,9 @@
         "subtitle": "Test Subtitle 1",
         "imagePath": "/assets/img/articles/heading/Episode1.png",
         "postedDateTime": "2017-08-18T22:35:42Z",
-        "content": "Content for episode 1",
-        "audioPath": "/audio/episode1",
-        "notes": "Some notes for article 1"
+        "description": "Content for episode 1",
+        "audioPath": "/assets/audio/XEGSCbyCPC_I_E1.mp3",
+        "showNotes": "Some notes for article 1"
     },
     {
         "Id": 3,
@@ -24,9 +24,9 @@
         "subtitle": "Test Subtitle 2",
         "imagePath": "/assets/img/articles/heading/Episode2.png",
         "postedDateTime": "2017-08-18T22:35:42Z",
-        "content": "Content for episode 2",
-        "audioPath": "/audio/episode2",
-        "notes": "Some notes for article 2"
+        "description": "Content for episode 2",
+        "audioPath": "/assets/audio/XEGSCbyCPC_I_E1.mp3",
+        "showNotes": "Some notes for article 2"
     },
     {
         "Id": 4,
@@ -34,9 +34,9 @@
         "subtitle": "Test Subtitle 3",
         "imagePath": "/assets/img/articles/heading/Episode3.png",
         "postedDateTime": "2017-08-18T22:35:42Z",
-        "content": "Content for episode 3",
+        "description": "Content for episode 3",
         "audioPath": "",
-        "notes": ""
+        "showNotes": ""
     },
     {
         "Id": 5,
@@ -44,8 +44,8 @@
         "subtitle": "Test Subtitle 4",
         "imagePath": "/assets/img/articles/heading/Episode4.jpg",
         "postedDateTime": "2017-08-18T22:35:42Z",
-        "content": "Content for episode 4",
-        "audioPath": "/audio/episode4",
-        "notes": "Some notes for article 4 and some other stuff"
+        "description": "Content for episode 4",
+        "audioPath": "/assets/audio/XEGSCbyCPC_I_E1.mp3",
+        "showNotes": "Some notes for article 4 and some other stuff"
     }
 ]
