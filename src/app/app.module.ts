@@ -25,6 +25,7 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 import { ViewArticleComponent } from './article/view-article/view-article.component';
 import { EditArticleComponent } from './article/edit-article/edit-article.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { EditArticleComponent } from './article/edit-article/edit-article.compon
     AppRoutingModule,
     JsonpModule,
     AppRoutingModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    NgbModule.forRoot()
   ],
     declarations: [
     AppComponent,

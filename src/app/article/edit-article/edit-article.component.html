@@ -1,30 +1,28 @@
 <div *ngIf="!title; else forminfo">
-    <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+    <form [formGroup]="articleForm" (ngSubmit)="addPost(articleForm.value)">
         <div class="form-container">
             <div class="row columns">
-                <h1>My Reactive Form</h1>
-                <label>Title
-          <input type="text" formControlName="title">
-        </label>
-                <label>Title Image
-          <input type="text" formControlName="titleImage">
-        </label>
-                <label>Subtitle
-          <input type="text" formControlName="subTitle">
-        </label>
-                <label>Description
-          <textarea formControlName="description"></textarea>
-        </label>
-                <label>Podcast Filename
-          <input type="text" formControlName="podcastFilename">
-        </label>
+                <h1>Article</h1>
                 <button type="button" class="btn btn-primary glyphicon glyphicon-list-alt" data-toggle="collapse" [attr.data-target]="'#' + pageArticle.Id">
-          <span style="font-family: 'Khula', sans-serif">
-            Upload Podcast
-          </span>
-        </button>
-
-                <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
+                    <span style="font-family: 'Khula', sans-serif">
+                        Upload Article Title Image
+                        <input type="text" formControlName="titleImage">
+                        <!--<img id="article_image"></img> -->
+                    </span>
+                </button>
+                <label>Title
+                    <input type="text" formControlName="title"></label>
+                <label>Subtitle
+                  <input type="text" formControlName="subTitle"></label>
+                <label>Description
+                    <textarea formControlName="description"></textarea>
+                </label>
+                <label>Podcast Filename
+                    <input type="text" formControlName="podcastFilename"></label>
+                <button type="button" class="btn btn-primary glyphicon glyphicon-list-alt" data-toggle="collapse" [attr.data-target]="'#' + pageArticle.Id">
+                    <span style="font-family: 'Khula', sans-serif">Upload Podcast</span>
+                </button>
+                <input type="submit" class="button expanded" value="Submit Form" [disabled]="!articleForm.valid">
             </div>
         </div>
     </form>

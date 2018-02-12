@@ -6,3 +6,9 @@
 .panel-body {
     background-color: #8D93C7;
 }
+
+.img-thumbnail {
+    max-width: 110px;
+    max-height: 120px;
+    margin-bottom: 3px;
+}

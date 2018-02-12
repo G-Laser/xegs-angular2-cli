@@ -9,8 +9,12 @@ import * as _ from 'lodash';
   selector: 'app-view-article-component',
   template: `<div *ngIf="pageArticles">
   <article *ngFor="let pageArticle of pageArticles">
-    <img src="{{pageArticle.imagePath}}" class="pull-left article-image" title="{{pageArticle.title}}: {{pageArticle.subtitle}}" />
+  <img src="{{pageArticle.imagePath}}" class="pull-left article-image" title="{{pageArticle.title}}: {{pageArticle.subtitle}}" />
     <h2>{{pageArticle.title}}: {{pageArticle.subtitle}}</h2>
+    <div class='pull-right'>
+      <button [attr.id]="'edit_article_' + pageArticle.Id" type="button" class="btn glyphicon glyphicon-edit btn-primary" [attr.title]="'Edit Article ' + pageArticle.title"></button>
+      <button [attr.id]="'delete_article_' + pageArticle.Id" type="button" class="btn glyphicon glyphicon-remove-circle btn-primary" [attr.title]="'Delete Article ' + pageArticle.title"></button>
+    </div>
     <p>{{pageArticle.description}}</p>
     <div *ngIf="pageArticle.audioPath.length > 0">
       <audio controls>
@@ -24,12 +28,13 @@ import * as _ from 'lodash';
         </span>
         </button>
         <div id="{{pageArticle.Id}}" class="collapse show_notes">
-        {{pageArticle.notes}}
+        {{pageArticle.showNotes}}
         </div>
       </div>
     </div>
   </article>
-</div>`
+</div>`,
+styleUrls:['./view-article.component.css']
 })
 
 export class ViewArticleComponent implements OnInit {

@@ -1,0 +1,29 @@
+.article-image {
+    border-radius: 6px;
+    border-color: black;
+    border-width: 1px;
+    border: 2px solid black;
+    margin-right: 10px;
+    width: 200px;
+}
+
+article {
+    vertical-align: text-top;
+    margin-bottom: 5em;
+}
+
+.article-title {
+    margin-top: -20px;
+    font-family: 'Monofett', cursive;
+    font-size: 250%;
+    white-space: nowrap;
+}
+
+.article-summary {
+    font-style: italic;
+    font-weight: 600;
+}
+
+audio {
+    width: 90%;
+}
